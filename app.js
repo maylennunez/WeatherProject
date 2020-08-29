@@ -12,12 +12,12 @@ res.sendFile(__dirname + "/index.html")
 
 app.post("/", function(req, res){
   console.log(req.body.cityName)
-  const apiKey =" 071ae9990f00873fef062f6bf6095f41";
+  const apiKey ="00b29665f234a3df1d2f2b0cbdc9ade3";
   const query = req.body.cityName
-  const units = "imperial"
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + units;
+  const unit = "imperial"
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + unit;
 
-
+//console.log(URL)
 
   https.get(url, function(response) {
     console.log(response.statusCode); //
